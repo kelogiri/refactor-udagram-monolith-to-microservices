@@ -1,6 +1,10 @@
 apiVersion: v1
 kind: ConfigMap
 data:
+  POSTGRES_USERNAME: udagramkeldev
+  POSTGRES_PASSWORD: college1
+  AWS_ACCESS_KEY_ID: ASIAZT4QQHRH3YMVCTWF
+  AWS_SECRET_ACCESS_KEY: RImvNwGxvaAxhFuVEbw1QBO6ziLKpKMgDHE9cxrf
   AWS_MEDIA_BUCKET: udagram-kelvin-dev
   AWS_PROFILE: default
   AWS_REGION: us-east-2
