@@ -9,7 +9,7 @@ services:
         - backend-user
         - backend-feed
   backend-user:
-    image: kayjoe/udagram-api-user:v7
+    image: kayjoe/udagram-api-user:v8
     environment:
       POSTGRES_USERNAME: $POSTGRES_USERNAME
       POSTGRES_PASSWORD: $POSTGRES_PASSWORD 
@@ -19,9 +19,9 @@ services:
       AWS_PROFILE: $AWS_PROFILE 
       AWS_MEDIA_BUCKET: $AWS_MEDIA_BUCKET
       JWT_SECRET: $JWT_SECRET
-      URL: "http://localhost:8100"
+      URL: "http://aa14169d0c7404b33847e4ec1f57b17c-421867176.us-east-2.elb.amazonaws.com"
   backend-feed:
-    image: kayjoe/udagram-api-feed:v6
+    image: kayjoe/udagram-api-feed:v7
     volumes:
       - $HOME/.aws:/root/.aws
     environment:
@@ -33,7 +33,7 @@ services:
       AWS_PROFILE: $AWS_PROFILE 
       AWS_MEDIA_BUCKET: $AWS_MEDIA_BUCKET
       JWT_SECRET: $JWT_SECRET
-      URL: "http://localhost:8100"
+      URL: "http://aa14169d0c7404b33847e4ec1f57b17c-421867176.us-east-2.elb.amazonaws.com"
   frontend:
     image: kayjoe/udagram-frontend:v8
     ports:
