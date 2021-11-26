@@ -1,7 +1,7 @@
 version: "3"
 services:
   reverseproxy:
-      image: kayjoe/udagram-reverseproxy
+      image: kayjoe/udagram-reverseproxy:v6
       ports:
           - 8080:8080
       restart: always
@@ -35,6 +35,6 @@ services:
       JWT_SECRET: $JWT_SECRET
       URL: "http://localhost:8100"
   frontend:
-    image: kayjoe/udagram-frontend:v7
+    image: kayjoe/udagram-frontend:v8
     ports:
       - "8100:80"
